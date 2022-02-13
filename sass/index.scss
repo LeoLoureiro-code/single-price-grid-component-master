@@ -1,0 +1,79 @@
+@import 'variables';
+
+html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $mainBackground;
+    height: 100vh;
+}
+
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: $fontFamily;
+    justify-content: center;
+    height: 100%;
+    padding: 30px;
+    width: 100%;
+}
+
+section{
+    width: 100%;
+}
+
+#community-section{
+    background-color: $communityBackground;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    
+    h1{
+        color: $title;
+        margin: 10px 0;
+    }
+
+    .guarantee{
+        color: $btnBackground;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    .product-description{
+        color: $text;
+        font-size: 14px;
+        line-height: 1.5rem;
+        margin: 20px 0;
+    }
+
+}
+
+#subscription-section{
+    background-color: $subscriptionBackground;
+    color: $mainBackground;
+    padding: 20px;
+
+    h2{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .montly-price{
+        font-size: 20px;
+        color: $monthlyPrice;
+
+        .price{
+            color: $communityBackground;
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+
+    .sign-up{
+        margin: 0 auto;
+        padding: 10px 100px;
+    }
+}
