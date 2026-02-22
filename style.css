@@ -1,0 +1,196 @@
+:root{
+
+    /*Sizes*/
+    --tablet-size: 35.625rem;
+    --desktop-size: 90rem;
+
+    /*Colors*/
+    --Teal500: hsl(179, 62%, 43%);
+    --Teal400: hsl(179, 78%, 44%);
+    --Teal100: hsl(204, 43%, 93%);
+    --Green400: hsl(71, 73%, 54%);
+    --Gray500: hsl(218, 22%, 67%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Typography*/
+    --font-size: 1rem;
+    --font-family: "Karla", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Teal100);
+    display: flex;
+    font-family: var(--font-family);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+h1{
+    color: var(--Teal500);
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    margin-bottom: 1.5rem;
+}
+
+h2{
+    font-size: 1.1rem;
+    color: var(--White);
+}
+
+section{
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    padding: 4rem 2rem;
+}
+
+.join-in-section{
+    background-color: var(--White);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1.8rem 1.4rem;
+}
+
+.guarantee-paragraph{
+    color: var(--Green400);
+    font-weight: 700;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    margin-bottom: 1.4rem;
+}
+
+.guarantee-info-paragraph{
+    color: var(--Gray500);
+    font-weight: 700;
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    line-height: 1.6rem;
+}
+
+.subscription-section{
+    background-color: var(--Teal500);
+    padding: 1.8rem 1.4rem;
+}
+
+.price-monthly{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.price{
+    color: var(--White);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.per-month{
+    color: var(--White);
+}
+
+.price-daily{
+    color: var(--White);
+    margin-top: 0.5rem;
+}
+
+.sign-up-button{
+    background-color: var(--Green400);
+    border: none;
+    border-radius: 5px;
+    color: var(--White);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 700;
+    height: 3.2rem;
+    margin-top: 1.9rem;
+    outline: none;
+    max-width: 16.4rem;
+    min-width: 15rem;
+    transition: 0.5s all ease-out;
+}
+
+.sign-up-button:hover{
+    background-color: var(--White);
+    color: var(--Green400);
+    cursor: pointer;
+}
+
+.why-us-section{
+    background-color: var(--Teal400);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: var(--font-family);
+    padding: 1.3rem 1.4rem;
+}
+
+.features-list{
+    color: var(--White);
+    font-size: 0.9rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.features-item{
+    margin-bottom: 0.2rem;
+}
+
+/*Tablet*/
+
+@media (min-width: 35.625rem){
+
+    .container{
+        max-width: 44rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .join-in-section{
+        height: 14rem;
+        grid-column: 1/-1;
+        align-items: start;
+        padding: 2.7rem 2.5rem;
+    }
+
+    .subscription-section, .why-us-section{
+        padding: 2.2rem 2.5rem;
+    }
+
+    .subscription-section{
+        height: 16rem;
+        grid-column: 1/5;
+        grid-row: 2;
+        align-items: start;
+        border-bottom-left-radius: 5px;
+    }
+
+    .guarantee-paragraph{
+        margin-bottom: 0.7rem;
+    }
+
+    .guarantee-info-paragraph{
+        font-weight: 400;
+    }
+
+    .why-us-section{
+        grid-column: 5/-1;
+        grid-row: 2;
+        align-items: start;
+        border-bottom-left-radius: 0;
+    }
+
+    .features-list{
+        margin-top: 1.3rem;
+    }
+
+}
